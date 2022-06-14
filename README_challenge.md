@@ -25,7 +25,14 @@ make push-image
 ```
 
 ## Deploy to Docker
+---
+Docker deployment is very binded on server infrastrucuture, so developers need to now exactly on which server them software will be deployed.
 
+There is no HA in this kind os environemt.
+
+The concept here is IaaS.
+
+---
 Deploy backing services (Postgres, RabbitMQ and Redis) running dev_run_backingsvcs.sh script.
 
 Remeber to add your user to the Docker group to avoid running tests as sudo.
@@ -56,6 +63,10 @@ make undeploy-docker
 ./dev_rm_backingsvcs.sh
 ```
 ## Deploy to KinD
+
+On Kubernetes deployment, developers have more freedom to develop their software whitout care about the application availability, because Kubernetes will take care this for them.
+
+The concept here still IaaS.
 
 Inside k8s folder I ran:
 ```
