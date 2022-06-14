@@ -97,6 +97,8 @@ make undeployK8
 ## Cloud Foundry
 Cloud Foundry is a PaaS solution which let developers be freely to develop their software whiout care about the infrastructure the app will be deployed.
 
+This would speed up software developement because developer doesn't need to pay attention on the infrastructure them software will running into, they just develop and CF take care of the rest.
+
 ### Deploy Kind cluster
 ```
 kind create cluster --name kubecf
