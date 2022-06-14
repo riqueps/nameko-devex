@@ -1,9 +1,9 @@
 build-image:
-	docker build -t nameko/nameko-example-gateapi:$(TAG) .;
+	docker build -t riqueps/nameko-example-gateapi:$(TAG) .;
 
 docker-tag:
-	docker tag nameko/nameko-example-gateapi:$(FROM_TAG) \
-	nameko/nameko-example-gateapi:$(TAG)
+	docker tag riqueps/nameko-example-gateapi:$(FROM_TAG) \
+	riqueps/nameko-example-gateapi:$(TAG)
 
 push-image:
-	docker push nameko/nameko-example-gateapi:$(TAG)
+	docker push riqueps/nameko-example-gateapi:$(TAG)

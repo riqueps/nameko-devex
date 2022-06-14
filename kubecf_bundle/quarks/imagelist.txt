@@ -1,0 +1,6 @@
+ghcr.io/cloudfoundry-incubator/quarks-operator:v7.2.1-0.gaeb6ef3
+ghcr.io/cfcontainerizationbot/coredns:0.1.0-1.6.7-bp152.1.19
+ghcr.io/cfcontainerizationbot/kubecf-kubectl:v1.20.2
+ghcr.io/cloudfoundry-incubator/quarks-job:v1.0.218
+ghcr.io/cloudfoundry-incubator/quarks-secret:v1.0.758
+ghcr.io/cloudfoundry-incubator/quarks-statefulset:v1.0.1319

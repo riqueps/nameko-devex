@@ -118,17 +118,38 @@ cf_ds_redis:
 			sleep 1; \
 	done 
 
-deployCF: cf_target cf_cs_postgres cf_cs_rabbitmq cf_cs_redis
+deployCF: cf_target
 	cf delete $(CF_APP) -f
 	# create environment.yml file from environment_dev.yml file
 	cat environment_dev.yml | grep -v '#dev' > environment.yml
 	cf push $(CF_APP) --no-start
 	rm -f environment.yml
 
-	cf bind-service $(CF_APP) $(CF_APP)_postgres
-	cf bind-service $(CF_APP) $(CF_APP)_rabbitmq
-	cf bind-service $(CF_APP) $(CF_APP)_redis
+	cf bind-service $(CF_APP) postgresql
+	cf bind-service $(CF_APP) rabbitmq
+	cf bind-service $(CF_APP) redis
 	cf start $(CF_APP)
+
+# deployCF: cf_target cf_cs_postgres cf_cs_rabbitmq cf_cs_redis
+# 	cf delete $(CF_APP) -f
+# 	# create environment.yml file from environment_dev.yml file
+# 	cat environment_dev.yml | grep -v '#dev' > environment.yml
+# 	cf push $(CF_APP) --no-start
+# 	rm -f environment.yml
+
+# 	cf bind-service $(CF_APP) $(CF_APP)_postgres
+# 	cf bind-service $(CF_APP) $(CF_APP)_rabbitmq
+# 	cf bind-service $(CF_APP) $(CF_APP)_redis
+# 	cf start $(CF_APP)
+
+# deployCF: cf_target 
+# 	cf delete $(CF_APP) -f
+# 	# create environment.yml file from environment_dev.yml file
+# 	cat environment_dev.yml | grep -v '#dev' > environment.yml
+# 	cf push $(CF_APP) --no-start
+# 	rm -f environment.yml
+
+# 	cf start $(CF_APP)
 
 undeployCF: cf_target 
 	cf delete $(CF_APP) -f -r
