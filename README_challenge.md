@@ -1,6 +1,6 @@
 # Deploying nameko-devex by riqueps
 ## Prerequisites
-The whole setup bellow was made using:
+The whole setup bellow was done using:
 - Ubuntu Desktop 20.04 LTS (Focal).
 - [Docker 20.10.17](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 - [Conda 4.12.0](https://docs.conda.io/en/latest/miniconda.html)
