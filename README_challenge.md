@@ -148,6 +148,10 @@ So I tried to deploy apps from docker images, but as soon after I was able to de
 
 So until today, june 13, I was not able to finish the tests in a Cloud Foundry environment.
 
+#### Enable Docker
+```
+cf enable-feature-flag diego_docker
+```
 #### PostgresSQL
 ```
 cf push postgresql --docker-image postgres:11.16-alpine
