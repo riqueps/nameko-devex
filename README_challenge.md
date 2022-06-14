@@ -61,7 +61,7 @@ Inside k8s folder I ran:
 ```
 make deployK8
 ```
-An error about Ingress object creation, than I needed to each object separately:
+An error about Ingress object creation occurs, than I needed to each object separately:
 ```
 make kind-setup-ingress
 ```
