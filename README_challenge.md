@@ -28,6 +28,8 @@ make push-image
 ---
 Docker deployment is very binded on server infrastrucuture, so developers need to now exactly on which server them software will be deployed.
 
+Developer need to build the dokcer images so they need know exactly which plataform they want to run them software.
+
 There is no HA in this kind os environemt.
 
 The concept here is IaaS.
@@ -63,11 +65,12 @@ make undeploy-docker
 ./dev_rm_backingsvcs.sh
 ```
 ## Deploy to KinD
-
-On Kubernetes deployment, developers have more freedom to develop their software whitout care about the application availability, because Kubernetes will take care this for them.
+---
+On Kubernetes deployment, developers have a little more freedom to develop their software whitout care about the application availability, because Kubernetes will take care this for them., but they still need to build the images.
 
 The concept here still IaaS.
 
+---
 Inside k8s folder I ran:
 ```
 make deployK8
@@ -106,9 +109,14 @@ make undeployK8
 ```
 
 ## Cloud Foundry
+---
 Cloud Foundry is a PaaS solution which let developers be freely to develop their software whiout care about the infrastructure the app will be deployed.
 
-This would speed up software developement because developer doesn't need to pay attention on the infrastructure them software will running into, they just develop and CF take care of the rest.
+This would speed up software developement because developer doesn't need to pay attention on the infrastructure them software will running into, eg: build images, they just develop and push them code into CF and CF will take care of the rest.
+
+The concept here is PaaS
+
+---
 
 ### Deploy Kind cluster
 ```
