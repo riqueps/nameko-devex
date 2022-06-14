@@ -28,9 +28,9 @@ make push-image
 ---
 Docker deployment is very binded on server infrastrucuture, so developers need to now exactly on which server them software will be deployed.
 
-Developer need to build the dokcer images so they need know exactly which plataform they want to run them software.
+Developer need to build the docker images so they need know exactly which plataform they want to run them software.
 
-There is no HA in this kind os environemt.
+There is no HA in this kind os environment.
 
 The concept here is IaaS.
 
